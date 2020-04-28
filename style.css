@@ -1,0 +1,132 @@
+
+
+#head{
+    background: rgba(230, 8, 90, 1);
+    height: auto;
+    color: white;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#about p{
+    padding: 20px;
+}
+#about p, nav {
+    font-size: 20px;
+}
+nav{
+    padding-top: 10px;
+    background-color: black;
+    height: 60px;
+    margin-left: 30px;
+}
+
+a{
+    all: unset;
+}
+
+a:hover{
+    color: rgb(230, 4, 41);
+    text-decoration: none;
+}
+
+#logo img{
+    float: left;
+    height: 70px;
+}
+
+/* image fading -- not working */
+.image-overlay{ 
+    background-image: url("./img/fuji.jpg");
+    height: 100%;
+    width: 100%;
+    background-color:  rgba(230, 8, 90, 0);
+    background-repeat: no-repeat;
+    opacity: .7;
+    /* display: flex; */
+    /* align-self: flex-end; */
+    float: left;
+}
+.color-overlay{
+    width: 100%;
+    height: 88%;
+    background: linear-gradient(to right, rgba(230, 8, 90, 1), rgba(230, 8, 90, 0));
+}
+/* image fading -- not working  */
+
+#home{
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+button{
+    background:  rgba(230, 8, 90, 1);
+    border: none;
+    transform: scale(2);
+    color: 	#FDD7E4
+}
+
+button:hover{
+    background-color: pink;
+    box-shadow: rgb(116, 4, 41) 5px 5px 2px;
+    color: lightcoral;
+}
+h3{
+    margin-top: 20px;
+}
+
+.jlpt, .process{
+    color: black;
+}
+
+.jaltra{
+    color: white;
+    background-color: #e6085a;
+    /* background: rgb(230, 8, 90,1); */
+    /* opacity: 0.6; */
+    z-index: 10;
+}
+
+.jaltra, .jlpt{
+    height: auto;
+    width: 100vw;
+    font-size: 20px;
+    display: block;
+    padding: 20px 0 0 20px;
+}
+
+.divide{
+    bottom: -4px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    height: auto;
+    width: 100vw;
+}
+
+.process{
+    color: rgb(160, 4, 56);
+    text-align: center;
+    height: auto;
+    padding: 20px;;
+}
+
+span.col, h6{
+    padding: 10px;
+}
+
+
+#contact {
+    padding: 10px;;
+    text-align: center;
+}
+
+#contact h5{
+    color: #e6085a;
+}
+
