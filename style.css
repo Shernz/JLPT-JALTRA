@@ -1,23 +1,17 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
 #head{
     background: rgba(230, 8, 90, 1);
     height: auto;
     color: white;
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 #about p{
     padding: 20px;
+    font-weight: lighter;
 }
 #about p, nav {
     font-size: 20px;
-}
-nav{
-    padding-top: 10px;
-    background-color: black;
-    height: 60px;
-    margin-left: 30px;
 }
 
 a{
@@ -29,49 +23,32 @@ a:hover{
     text-decoration: none;
 }
 
-#logo img{
+img{
     float: left;
-    height: 70px;
+    height: 50px;
 }
 
-/* image fading -- not working */
-.image-overlay{ 
-    background-image: url("./img/fuji.jpg");
-    height: 100%;
-    width: 100%;
-    background-color:  rgba(230, 8, 90, 0);
-    background-repeat: no-repeat;
-    opacity: .7;
-    /* display: flex; */
-    /* align-self: flex-end; */
-    float: left;
-}
-.color-overlay{
-    width: 100%;
-    height: 88%;
-    background: linear-gradient(to right, rgba(230, 8, 90, 1), rgba(230, 8, 90, 0));
-}
-/* image fading -- not working  */
 
 #home{
     margin-top: 30px;
     padding-bottom: 20px;
 }
 
-button{
+#home button{
     background:  rgba(230, 8, 90, 1);
     border: none;
     transform: scale(2);
     color: 	#FDD7E4
 }
 
-button:hover{
+#home button:hover{
     background-color: pink;
     box-shadow: rgb(116, 4, 41) 5px 5px 2px;
     color: lightcoral;
 }
 h3{
-    margin-top: 20px;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
 }
 
 .jlpt, .process{
@@ -81,9 +58,6 @@ h3{
 .jaltra{
     color: white;
     background-color: #e6085a;
-    /* background: rgb(230, 8, 90,1); */
-    /* opacity: 0.6; */
-    z-index: 10;
 }
 
 .jaltra, .jlpt{
@@ -94,13 +68,6 @@ h3{
     padding: 20px 0 0 20px;
 }
 
-.divide{
-    bottom: -4px;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-}
 
 .footer{
     background-color: black;
@@ -130,3 +97,16 @@ span.col, h6{
     color: #e6085a;
 }
 
+body{
+    overflow-x: hidden;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    background-color: black;
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
