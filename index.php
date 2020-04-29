@@ -10,6 +10,12 @@
 	<br>
 	<br>
 	<form method="post" action="pgRedirect.php">
+			
+					
+					<label>CUSTID ::</label>
+				<b>	<INPUT id="CUST_ID"  maxlength="12" size="12" name="CUST_ID" readonly autocomplete="off" value="<?php echo  "CUST" . rand(10000,99999999)?>"></b>
+		<label>EMAIL ID ::</label>		<b>	<INPUT id="EMAIL"  maxlength="100" size="12" name="EMAIL"  autocomplete="off" required></b>
+		<label>MOBILE NUMBER ::</label>		<b>	<INPUT id="MOBILE"  maxlength="10" size="12" name="MOBILE"  autocomplete="off" required></b>
 		<table border="1" >
 			<tbody>
 				<tr>
@@ -25,11 +31,7 @@
 						value="<?php echo  "ORDS" . rand(10000,99999999)?>">
 					</td>
 				</tr>
-				<tr hidden>
-					<td>2</td>
-					<td><label>CUSTID ::*</label></td>
-					<td><input id="CUST_ID" tabindex="2" maxlength="12" size="12" name="CUST_ID" autocomplete="off" value="CUST001"></td>
-				</tr>
+			
 				<tr hidden>
 					<td>3</td>
 					<td><label>INDUSTRY_TYPE_ID ::*</label></td>
@@ -43,7 +45,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>1</td>
+					<td>2</td>
 					<td><label>N5</label></td>
 					<td><input title="TXN_AMOUNT" tabindex="10"
 						type="text" name="TXN_AMOUNT"
@@ -57,7 +59,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<h1> Amount you need to pay for N5:RS.500</h1>
+		<h1> Amount you need to pay for N5:RS.1</h1>
 
 	</form>
 	
