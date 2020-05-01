@@ -1,3 +1,46 @@
+
+<?php
+
+$to=$_REQUEST["email"];
+
+$subject="OTP FOR JALTRA";
+$otp=(string)rand(1001,9999);
+
+$text="YOUR OTP FOR JALTRA REGISTRATION IS ".$otp;
+use PHPMailer\PHPMailer\PHPMailer; 
+use PHPMailer\PHPMailer\Exception; 
+  
+require 'vendor/autoload.php'; 
+  
+$mail = new PHPMailer(true); 
+  
+try { 
+    $mail->SMTPDebug = 2;                                        
+    $mail->isSMTP();                                             
+    $mail->Host       = 'smtp.gfg.com;';                     
+    $mail->SMTPAuth   = true;                              
+    $mail->Username   = 'adityasreeram99@gmail.com';                  
+    $mail->Password   = 'mr.dmr.d';                         
+    $mail->SMTPSecure = 'tls';                               
+    $mail->Port       = 587;   
+  
+
+$mail->SMTPSecure = false;
+$mail->SMTPAutoTLS = false;
+    $mail->setFrom('adityasreeram99@gmail.com', 'Name');            
+    $mail->addAddress($to); 
+ 
+       
+    $mail->isHTML(true);                                   
+    $mail->Subject = 'Subject'; 
+    $mail->Body    = 'HTML message body in <b>bold</b> '; 
+    $mail->AltBody = 'Body in plain text for non-HTML mail clients'; 
+    $mail->send(); 
+    echo "Mail has been sent successfully!"; 
+} catch (Exception $e) { 
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"; 
+} 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,16 +96,10 @@
             </p>
             <button type="submit" onclick="open()" id="getin">Sign in or Sign up</button>
             <div id="signin">
-                <div class="signin">
-                    <form action="login.php" method="post">
-                        <input type="email" name="email" placeholder="Email" required> <br>
-                        <input type="password" name="passwd" id="" placeholder="Password" required> <br>
-                        <button type="submit" onclick="otp()">Sign in</button>
-                    </form>
-                </div>
+               
                 <div class="signup">
                     <form action="otp.php" method="post">
-                        <input type="email" name="email" placeholder="Email" required> <br> 
+                        <input type="text" name="otp" placeholder="OTP" required> <br> 
                         <button type="submit">Sign up</button>
                     </form>
                 </div>
