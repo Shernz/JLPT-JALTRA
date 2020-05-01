@@ -1,45 +1,45 @@
 
-<?php
+<?php session_start();
 
-$to=$_REQUEST["email"];
+$to=$_REQUEST['email'];
+$otp=rand(1001,9999);
+$_SESSION['otp']=$otp;
 
-$subject="OTP FOR JALTRA";
-$otp=(string)rand(1001,9999);
 
-$text="YOUR OTP FOR JALTRA REGISTRATION IS ".$otp;
-use PHPMailer\PHPMailer\PHPMailer; 
-use PHPMailer\PHPMailer\Exception; 
-  
-require 'vendor/autoload.php'; 
-  
-$mail = new PHPMailer(true); 
-  
-try { 
-    $mail->SMTPDebug = 2;                                        
-    $mail->isSMTP();                                             
-    $mail->Host       = 'smtp.gfg.com;';                     
-    $mail->SMTPAuth   = true;                              
-    $mail->Username   = 'adityasreeram99@gmail.com';                  
-    $mail->Password   = 'mr.dmr.d';                         
-    $mail->SMTPSecure = 'tls';                               
-    $mail->Port       = 587;   
-  
-
-$mail->SMTPSecure = false;
-$mail->SMTPAutoTLS = false;
-    $mail->setFrom('adityasreeram99@gmail.com', 'Name');            
-    $mail->addAddress($to); 
+require_once './vendor/autoload.php';
  
-       
-    $mail->isHTML(true);                                   
-    $mail->Subject = 'Subject'; 
-    $mail->Body    = 'HTML message body in <b>bold</b> '; 
-    $mail->AltBody = 'Body in plain text for non-HTML mail clients'; 
-    $mail->send(); 
-    echo "Mail has been sent successfully!"; 
-} catch (Exception $e) { 
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"; 
-} 
+try {
+
+    $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465,'ssl'))
+        ->setUsername('adityasreeram99@gmail.com')
+        ->setPassword('mr.dmr.d');
+ 
+ 
+    $mailer = new Swift_Mailer($transport);
+ 
+ 
+    $message = new Swift_Message();
+ 
+
+    $message->setSubject('Verification for jlptjaltra');
+ 
+
+    $message->setFrom(['sender@gmail.com' => 'sender name']);
+ 
+   
+    $message->setTo($to,'recipient name');
+ 
+
+ 
+
+    $message->setBody("your verification code is ".$otp);
+ 
+    
+    $result = $mailer->send($message);
+} catch (Exception $e) {
+  echo $e->getMessage();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -98,8 +98,9 @@ $mail->SMTPAutoTLS = false;
             <div id="signin">
                
                 <div class="signup">
-                    <form action="otp.php" method="post">
+                    <form action="check.php" method="post">
                         <input type="text" name="otp" placeholder="OTP" required> <br> 
+                        <input type="hidden" name="oxt" value="<?php echo $otp;?>">
                         <button type="submit">Sign up</button>
                     </form>
                 </div>
