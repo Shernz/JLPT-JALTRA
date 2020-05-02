@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
 }
 if (strcmp($passx,$pass)==0){
     
-        header("Location: http://127.0.0.1/JLPT-JALTRA/apply.php");
+        header("Location: http://127.0.0.1/JLPT-JALTRA/formdownload.html");
     die();
  
 }
