@@ -37,7 +37,7 @@ img{
 #home button{
     background:  rgba(230, 8, 90, 1);
     border: none;
-    transform: scale(2);
+    /* transform: scale(2); */
     color: 	#FDD7E4
 }
 
@@ -108,7 +108,7 @@ nav{
 }
 
 
-.signin, .signup{
+/* .signin, .signup{
     margin-top: 30px;
     margin-bottom: 30px;
     height: 100%;
@@ -137,4 +137,4 @@ nav{
     right: 25;
     top: 5;
 
-}
+} */
