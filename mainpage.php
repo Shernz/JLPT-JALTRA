@@ -52,7 +52,8 @@
                 <br>
                 Please register/sign in for applying for JLPT in Chennai.
             </p>
-            <button type="submit" onclick="open()" id="getin">Sign in or Sign up</button>
+            <!-- <button type="submit" onclick="open()" id="getin">Sign in or Sign up</button> -->
+            <h4>Sign in or Sign up</h4>
             <div id="signin">
                 <div class="signin">
                     <form action="login.php" method="post">
@@ -70,6 +71,7 @@
             </div>
             <h3>Registeration ends by ... days</h3>
         </div>
+       
     </header>
     <main>
         <!-- <svg class="divide" width="100vw" height="400" viewBox="0 0 100 100"  preserveAspectRatio="none" fill="rgb(234, 8, 90)" version="1.1" xmlns="http://www.w3.org/2000/svg">
