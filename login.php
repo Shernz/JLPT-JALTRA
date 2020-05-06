@@ -19,17 +19,19 @@ if ($result->num_rows > 0) {
        $passx= $row['password'];
     }
 } else {
-    echo "0 results";
+	
+    echo "<h2><b>Invalid Username Or Password</b></h2>";
 }
 if (strcmp($passx,$pass)==0){
     
-        header("Location: http://127.0.0.1/JLPT-JALTRA/formdownload.html");
+    header("Location: http://127.0.0.1/JLPT-JALTRA-master/verify.php?id=".$uname);
     die();
- 
 }
 else{
-    header("Location: http://127.0.0.1/JLPT-JALTRA/mainpage.php");
+    //header("Location: http://127.0.0.1/JLPT-JALTRA-master/mainpage.php");
     $_SESSION['wrong']="wrong credentials";
+	$var="Invalid Username or Password";
+	echo "<script>windows.alert({$var});</script>";
     die();
 }
 $conn->close();
