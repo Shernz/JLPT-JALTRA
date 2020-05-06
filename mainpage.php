@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +43,21 @@
 
 
         </nav>
-        
+        <?php
+			$i = 0; 
+			$dir = 'uploads/';
+			if ($handle = opendir($dir)) 
+			{
+				while (($file = readdir($handle)) !== false)
+				{
+					if (!in_array($file, array('.', '..')) && !is_dir($dir.$file)) 
+						$i++;
+				}
+			}	
+			$var=3500-$i;
+			echo '<marquee behavior="scroll" direction="left"><center><h2><b>TOTAL FORMS :</b> 3500&nbsp;&nbsp;&nbsp;&nbsp;<b>FORMS RECEIVED : </b>'.$i.'&nbsp;&nbsp;&nbsp;&nbsp;<b>FORMS LEFT : </b>'.$var.'</h2></marquee>';
+	
+		?>
         <div id="home">
             <h1>Japanese Language Proficiency Test (JLPT) Online Application for Chennai Center</h1>
             <p>
@@ -52,6 +65,7 @@
                 <br>
                 Please register/sign in for applying for JLPT in Chennai.
             </p>
+			
             <!-- <button type="submit" onclick="open()" id="getin">Sign in or Sign up</button> -->
             <h4>Sign in or Sign up</h4>
             <div id="signin">
@@ -69,6 +83,7 @@
                     </form>
                 </div>
             </div>
+			
             <h3>Registeration ends by ... days</h3>
         </div>
        
@@ -118,27 +133,27 @@
             <h3>Application Process</h3>
             <div class="row">
                 <span class="col">
-                    <a href="form.html">
+                    
                         <i class="fab fa-wpforms fa-6x fa-fw"></i>
                         <h6>Fill the form</h6>
-                    </a>
+                   
                 </span>
                 <span class="col">
-                    <a href="pay.html">
+						
                         <i class="fas fa-credit-card fa-6x fa-fw"></i>
                         <h6>Pay the fee</h6>
-                    </a>
+                   
                 </span>
                 <span class="col">
-                    <a href="halltkt.html">
+                   
                         <i class="fas fa-envelope-open-text fa-6x fa-fw"></i>
                         <h6>Get the hall ticket</h6>
-                    </a> 
+                    
                 </span>
             </div>
         </div>
     </main>
-
+	
     <footer class="footer" id="support">
         <div id="contact">
             <h3>Contact Us</h3>
