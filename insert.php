@@ -23,10 +23,9 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
 $conn->close();
 if (strcmp($given,$actual)==0){
-    header("Location: http://127.0.0.1/JLPT-JALTRA/mainpage.php");
+    header("Location: http://127.0.0.1/JLPT-JALTRA-master/mainpage.php");
 die();
 }
 ?>
