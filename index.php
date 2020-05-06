@@ -12,13 +12,37 @@
 	<form method="post" action="pgRedirect.php">
 			
 					
-					<label>CUSTID ::</label>
-				<b>	<INPUT id="CUST_ID"  maxlength="12" size="12" name="CUST_ID" readonly autocomplete="off" value="<?php echo  "CUST" . rand(10000,99999999)?>"></b>
-		<label>EMAIL ID ::</label>		<b>	<INPUT id="EMAIL"  maxlength="100" size="12" name="EMAIL"  autocomplete="off" required></b>
-		<label>MOBILE NUMBER ::</label>		<b>	<INPUT id="MOBILE"  maxlength="10" size="12" name="MOBILE"  autocomplete="off" required></b>
-		<table border="1" >
+		<label>CUSTID ::</label>
+		<b>	<INPUT id="CUST_ID"  maxlength="12" size="12" name="CUST_ID" readonly autocomplete="off" value="<?php echo  "CUST" . rand(10000,99999999)?>"></b>
+		<label>APLLICANT'S NAME :</label>		<b>	<INPUT id="NAME"  maxlength="100" size="12" name="NAME"  autocomplete="off" required></b>
+		<label>APPLICANT'S EMAIL ID :</label>		<b>	<INPUT id="EMAIL"  maxlength="100" size="12" name="EMAIL"  autocomplete="off" required></b>
+		<label>APPLICANT'S MOBILE NUMBER :</label>		<b>	<INPUT id="MOBILE"  maxlength="10" size="12" name="MOBILE"  autocomplete="off" required></b>
+		<p><B>LEVEL:</B></p>
+
+<div>
+  <input type="radio" id="N1" name="exam" value="1"  required>
+  <label for="N1">N1</label>
+</div>
+<div>
+  <input type="radio" id="N2" name="exam" value="2">
+  <label for="N2">N2</label>
+</div>
+<div>
+  <input type="radio" id="N3" name="exam" value="3">
+  <label for="N3">N3</label>
+</div>
+<div>
+  <input type="radio" id="N4" name="exam" value="4">
+  <label for="N4">N4</label>
+</div>
+<div>
+  <input type="radio" id="N5" name="exam" value="5">
+  <label for="N5">N5</label>
+</div>
+
+		<table border="0">
 			<tbody>
-				<tr>
+				<tr hidden>
 					<th>S.No</th>
 					<th>Exam</th>
 					<th>Amount</th>
@@ -44,7 +68,7 @@
 						size="12" name="CHANNEL_ID" autocomplete="off" value="WEB">
 					</td>
 				</tr>
-				<tr>
+				<tr hidden>
 					<td>2</td>
 					<td><label>N5</label></td>
 					<td><input title="TXN_AMOUNT" tabindex="10"
@@ -59,7 +83,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<h1> Amount you need to pay for N5:RS.1</h1>
+		
 
 	</form>
 	
