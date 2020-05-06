@@ -1,21 +1,33 @@
 <?php
+session_start();
 header("Pragma: no-cache");
 header("Cache-Control: no-cache");
 header("Expires: 0");
 // following files need to be included
 require_once("./lib/config_paytm.php");
 require_once("./lib/encdec_paytm.php");
-
 $checkSum = "";
 $paramList = array();
-
 $ORDER_ID = $_POST["ORDER_ID"];
 $CUST_ID = $_POST["CUST_ID"];
 $INDUSTRY_TYPE_ID = $_POST["INDUSTRY_TYPE_ID"];
 $CHANNEL_ID = $_POST["CHANNEL_ID"];
-$TXN_AMOUNT = $_POST["TXN_AMOUNT"];
+$TXN_AMOUNT = $_POST["exam"];
 $EMAIL=$_POST["EMAIL"];
 $MOBILE=$_POST["MOBILE"];
+$NAME=$_POST["NAME"];
+$_SESSION['varname'] = $EMAIL;
+$file_open = fopen("C:\\xampp\\htdocs\\JLPT-JALTRA-master\\transaction_details.csv", "a");
+  $no_rows = count(file("transaction_details.csv"));
+  $form_data = array(
+   'order_id'  => $_POST["ORDER_ID"] ,
+   'customer_id'  => $_POST["CUST_ID"],
+   'amount_paid'  => $_POST["TXN_AMOUNT"],
+   'email_id' => $_POST["EMAIL"],
+   'mobile_number' =>$_POST["MOBILE"],
+   'name' => $_POST["NAME"]
+  );
+  fputcsv($file_open, $form_data); 
 // Create an array having all required parameters for creating checksum.
 $paramList["MID"] = PAYTM_MERCHANT_MID;
 $paramList["ORDER_ID"] = $ORDER_ID;
@@ -25,7 +37,7 @@ $paramList["CHANNEL_ID"] = $CHANNEL_ID;
 $paramList["TXN_AMOUNT"] = $TXN_AMOUNT;
 $paramList["WEBSITE"] = PAYTM_MERCHANT_WEBSITE;
 
-$paramList["CALLBACK_URL"] = "http://127.0.0.1/paytm/jlpt/pgResponse.php";
+$paramList["CALLBACK_URL"] = "http://127.0.0.1/JLPT-JALTRA-master/jlpt/pgResponse.php";
 $paramList["MSISDN"] = $MOBILE; //Mobile number of customer
 $paramList["EMAIL"] = $EMAIL; //Email ID of customer
 $paramList["VERIFIED_BY"] = "EMAIL"; //
@@ -41,6 +53,7 @@ $checkSum = getChecksumFromArray($paramList,PAYTM_MERCHANT_KEY);
 <body>
 	<center><h1>Please do not refresh this page...</h1></center>
 		<form method="post" action="<?php echo PAYTM_TXN_URL ?>" name="f1">
+		
 		<table border="1">
 			<tbody>
 			<?php
