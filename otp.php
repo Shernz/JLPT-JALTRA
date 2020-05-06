@@ -1,45 +1,81 @@
-
 <?php session_start();
-
+use PHPMailer\PHPMailer\PHPMailer;
+require 'PHPMailer-6.0.3/src/Exception.php';
+require 'PHPMailer-6.0.3/src/PHPMailer.php';
+require 'PHPMailer-6.0.3/src/SMTP.php';
 $to=$_REQUEST['email'];
 $otp=rand(1001,9999);
 $_SESSION['otp']=$otp;
+class VerificationCode
+{    
+    public $smtpHost;
+    public $smtpPort;
+    public $sender;
+    public $password;
+    public $receiver;
+    public $code;
+    public function __construct($receiver,$otp)
+    {
+         $this->sender = "hboy7029@gmail.com";        
+        $this->password = "hboy@12345";  //ur pwd
+		$this->code=$otp;
+       
+        $this->receiver = $receiver;  
 
+       
+        $this->smtpHost="smtp.gmail.com ";        
+       
+      
+        $this->smtpPort = 587;
 
-require_once './vendor/autoload.php';
- 
-try {
+    }
+    public function sendMail(){
+        $mail = new PHPMailer();
+        $mail->IsSMTP();
+        $mail->SMTPAuth = true;
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
 
-    $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465,'ssl'))
-        ->setUsername('adityasreeram99@gmail.com')
-        ->setPassword('mr.dmr.d');
- 
- 
-    $mailer = new Swift_Mailer($transport);
- 
- 
-    $message = new Swift_Message();
- 
+        $mail->Host = $this->smtpHost;  
+        $mail->Port = $this->smtpPort;    
+        $mail->IsHTML(true);
+        $mail->Username = $this->sender;
+        $mail->Password = $this->password;
+        $mail->Body=$this->getHTMLMessage();
+        $mail->Subject = "JLPT registration {$this->code}";
+        $mail->SetFrom($this->sender,"OTP");
+        $mail->AddAddress($this->receiver);
+		if($mail->send()){
+          
+           
+        }
+        //echo "FAILED TO SEND MAIL";
+        // return false;
+	}
+		public function getHTMLMessage(){
+           
+        $htmlMessage=<<<MSG
+        <!DOCTYPE html>
+        <html>
+         <body>
+            <h1>otp for jlpt sign in:{$this->code}</h1>
+           
+         </body>
+        </html>        
+MSG;
+    return $htmlMessage;
+    }
 
-    $message->setSubject('Verification for jlptjaltra');
- 
-
-    $message->setFrom(['sender@gmail.com' => 'sender name']);
- 
-   
-    $message->setTo($to,'recipient name');
- 
-
- 
-
-    $message->setBody("your verification code is ".$otp);
- 
-    
-    $result = $mailer->send($message);
-} catch (Exception $e) {
-  echo $e->getMessage();
 }
 
+// recipient's email
+$vc=new VerificationCode($to,$otp);
+$vc->sendMail();
 ?>
 <!DOCTYPE html>
 <html lang="en">
