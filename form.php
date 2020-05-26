@@ -1,4 +1,4 @@
-<html dir="ltr" lang="en-US"><head>
+<html lang="en-US"><head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- <title></title> -->
@@ -11,14 +11,7 @@
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/bd0303748e.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="regform.css">
-	<script>
-			 function preventBack(){window.history.forward();}
-			setTimeout("preventBack()", 0);
-			window.onunload=function(){location.reload();};
-			// window.location.hash="no-back-button";
-			// window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
-			// window.onhashchange=function(){location.reload();}
-	</script>
+
 	<style>
 	 p{
 		/* display:inline-block; */
@@ -32,13 +25,13 @@
 
 		<section id="content " class="about" style="padding: 10px 0px;">
 			<div class="container">
-				<form id="formprevious" action="http://jaltra.org/welcome/form_fillingprevious" method="post" enctype="multipart/form-data">
+				<!-- <form id="formprevious" action="http://jaltra.org/welcome/form_fillingprevious" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="news_id" value="4"> 
 								<input type="hidden" name="user_id" value="1952"> 
 								<input type="hidden" name="save" id="formsubmit">
 					<button type="submit" id="previous data" class="btn btn-danger" value="previous_data">Load Previous Data</button>
-				</form>
-				<form id="formentry" action="http://jaltra.org/welcome/application" method="post" enctype="multipart/form-data">
+				</form> -->
+				<form id="formentry" action="applier.php" method="post" enctype="multipart/form-data">
 					<div class="">
 						<div class="row">        
 								<div class="col-md-2">
@@ -282,64 +275,7 @@
                                                         <!-- <option value="" ></option> -->
                                                                                          </select>	
 
-									
-									<!-- <input type="text" name="nativelang" value="" ><span class="text-danger">
-<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
-
-    <h4>A PHP Error was encountered</h4>
-
-    <p>Severity: Notice</p>
-    <p>Message:  Use of undefined constant php - assumed 'php'</p>
-    <p>Filename: darkgray/applicationForm.php</p>
-    <p>Line Number: 172</p>
-
-    
-        <p>Backtrace:</p>
-        
-            
-        
-            
-        
-            
-                <p style="margin-left:10px">
-                    File: /srv/users/serverpilot/apps/jaltra-web/public/application/views/themes/darkgray/applicationForm.php<br />
-                    Line: 172<br />
-                    Function: _error_handler                </p>
-
-            
-        
-            
-        
-            
-        
-            
-                <p style="margin-left:10px">
-                    File: /srv/users/serverpilot/apps/jaltra-web/public/application/core/MY_Controller.php<br />
-                    Line: 614<br />
-                    Function: view                </p>
-
-            
-        
-            
-                <p style="margin-left:10px">
-                    File: /srv/users/serverpilot/apps/jaltra-web/public/application/controllers/Welcome.php<br />
-                    Line: 128<br />
-                    Function: load_applicationForm                </p>
-
-            
-        
-            
-        
-            
-                <p style="margin-left:10px">
-                    File: /srv/users/serverpilot/apps/jaltra-web/public/index.php<br />
-                    Line: 292<br />
-                    Function: require_once                </p>
-
-            
-        
-    
-</div></span></td> -->
+			
 								</td></tr>     
 							</tbody></table>
 							<table style="width:100%">
@@ -1181,64 +1117,7 @@
 									<td height="10" style="width:11.7%; padding-left: 33px">
 										<li>
 											<input type="checkbox" id="check_65" name="customers5" value="5">
-											<!-- <input  type="checkbox" id="check_65" name="customers5" value="5" 
-<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
-
-    <h4>A PHP Error was encountered</h4>
-
-    <p>Severity: Notice</p>
-    <p>Message:  Use of undefined constant php - assumed 'php'</p>
-    <p>Filename: darkgray/applicationForm.php</p>
-    <p>Line Number: 587</p>
-
-    
-        <p>Backtrace:</p>
-        
-            
-        
-            
-        
-            
-                <p style="margin-left:10px">
-                    File: /srv/users/serverpilot/apps/jaltra-web/public/application/views/themes/darkgray/applicationForm.php<br />
-                    Line: 587<br />
-                    Function: _error_handler                </p>
-
-            
-        
-            
-        
-            
-        
-            
-                <p style="margin-left:10px">
-                    File: /srv/users/serverpilot/apps/jaltra-web/public/application/core/MY_Controller.php<br />
-                    Line: 614<br />
-                    Function: view                </p>
-
-            
-        
-            
-                <p style="margin-left:10px">
-                    File: /srv/users/serverpilot/apps/jaltra-web/public/application/controllers/Welcome.php<br />
-                    Line: 128<br />
-                    Function: load_applicationForm                </p>
-
-            
-        
-            
-        
-            
-                <p style="margin-left:10px">
-                    File: /srv/users/serverpilot/apps/jaltra-web/public/index.php<br />
-                    Line: 292<br />
-                    Function: require_once                </p>
-
-            
-        
-    
-</div>> -->
-											<label for="check_65">5</label>
+								<label for="check_65">5</label>
 										</li>
 									</td>                           
 								</tr>                    
@@ -1601,10 +1480,8 @@
 							<!-- <h4><b>署名/Signature</b> <span style="padding-left: 400px" > <b>日付/Date</b></span>  </h4>           -->
 						</div>
 					</div>
-					<!-- <input type="hidden" name="save" id="formsubmit"> -->
-					<!-- <button type="button" class="btn btn-default">Cancel</button> -->
-					<button type="submit" name="save" id="save_payment" class="btn btn-info pull-right" value="save_payment" onclick="return confirm('Are you sure you want to Proceed the Payment?');">Save &amp; Payment</button>
-					<button type="submit" name="save" id="save" class="btn btn-info pull-right" style="margin-right: 10px;" value="save" onclick="return confirm('Are you sure you want to Save this Record?');">Save</button>
+				
+					<button type="submit"  class="btn btn-info pull-right" style="margin-right: 10px;" value="save" >Save</button>
 				</form>
 			</div>
 			
@@ -1612,7 +1489,7 @@
 		<!-- #content end -->
 	
 
-		<script src="/backend/themes/darkgray/js/jquery.js"></script>
+		<!-- <script src="/backend/themes/darkgray/js/jquery.js"></script>
 		<script src="/backend/themes/darkgray/js/plugins.js"></script>
 		<script>
 			$(document).ready(function () {
@@ -1675,6 +1552,6 @@
 	$('#example').dropdownDatepicker({
 			});
 </script>
-<script src="/backend/themes/darkgray/js/functions.js"></script>	
+<script src="/backend/themes/darkgray/js/functions.js"></script>	 -->
 
 </body></html>
