@@ -94,7 +94,7 @@ span.col, h6{
 }
 
 #contact h5{
-    color: #e6085a;
+    color: red;
 }
 
 body{
@@ -119,7 +119,7 @@ nav{
 }
 
 .signin button, .signup button{
-    background-color: #e6085a;
+    background-color: red;
     color: white;
     border: solid white 2px;
     margin-top: 20px;
@@ -159,7 +159,7 @@ form{
 }
 
 span{
-    color: #e6085a;
+    color: red;
     font-weight: 800;
 }
 
