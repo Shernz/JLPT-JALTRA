@@ -565,31 +565,31 @@
 									<td height="10" style="width:20%;">⑮ <b>先生</b>with a teacher </td>                          
 									<td style="width:11.7%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_10" name="teacher1" value="Speaking">
+											<input type="checkbox" id="check_10" name="t_speak" value="Speaking">
 											<label for="check_10">1</label>
 										</li>
 									</td>                            
 									<td style="padding-left: 34px;width:11.8%;">
 										<li>
-											<input type="checkbox" id="check_11" name="teacher2" value="Listening">
+											<input type="checkbox" id="check_11" name="t_listen" value="Listening">
 											<label for="check_11">2</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_12" name="teacher3" value="Reading">
+											<input type="checkbox" id="check_12" name="t_read" value="Reading">
 											<label for="check_12">3</label>
 										</li>
 									</td>                                                                          
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_13" name="teacher4" value="Writing">
+											<input type="checkbox" id="check_13" name="t_write" value="Writing">
 											<label for="check_13">4</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_15" name="teacher5" value="NOTA">
+											<input type="checkbox" id="check_15" name="t_nota" value="NOTA">
 											<label for="check_15">5</label>
 										</li>
 									</td>                                                                          
@@ -598,31 +598,31 @@
 									<td height="30">⑯ <b>友人</b>with friends </td> 
 									<td style="width:11.7%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_21" name="friends1" value="Speaking">
+											<input type="checkbox" id="check_21" name="f_speak" value="Speaking">
 											<label for="check_21">1</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_22" name="friends2" value="Listening">
+											<input type="checkbox" id="check_22" name="f_listen" value="Listening">
 											<label for="check_22">2</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_23" name="friends3" value="Reading">
+											<input type="checkbox" id="check_23" name="f_read" value="Reading">
 											<label for="check_23">3</label>
 										</li>
 									</td>                                                                          
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_24" name="friends4" value="Writing">
+											<input type="checkbox" id="check_24" name="f_write" value="Writing">
 											<label for="check_24">4</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_25" name="friends5" value="NOTA">
+											<input type="checkbox" id="check_25" name="f_nota" value="NOTA">
 											<label for="check_25">5</label>
 										</li>
 									</td>                                     
@@ -631,31 +631,31 @@
 									<td height="30">⑰<b>家族</b>with family</td> 
 									<td style="width:11.7%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_31" name="family1" value="Speaking">
+											<input type="checkbox" id="check_31" name="fa_speak" value="Speaking">
 											<label for="check_31">1</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_32" name="family2" value="Listening">
+											<input type="checkbox" id="check_32" name="fa_listen" value="Listening">
 											<label for="check_32">2</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_33" name="family3" value="Reading">
+											<input type="checkbox" id="check_33" name="fa_read" value="Reading">
 											<label for="check_33">3</label>
 										</li>
 									</td>                                                                          
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_34" name="family4" value="Writing">
+											<input type="checkbox" id="check_34" name="fa_write" value="Writing">
 											<label for="check_34">4</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_35" name="family5" value="NOTA">
+											<input type="checkbox" id="check_35" name="fa_nota" value="NOTA">
 											
 											<label for="check_35">5</label>
 										</li>
@@ -665,31 +665,31 @@
 									<td height="30">⑱<b>上司</b>with a supervisor</td> 
 									<td style="width:11.7%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_41" name="supervisor1" value="Speaking">
+											<input type="checkbox" id="check_41" name="sv_speak" value="Speaking">
 											<label for="check_41">1</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_42" name="supervisor2" value="Listening">
+											<input type="checkbox" id="check_42" name="sv_listen" value="Listening">
 											<label for="check_42">2</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_43" name="supervisor3" value="Reading">
+											<input type="checkbox" id="check_43" name="sv_read" value="Reading">
 											<label for="check_43">3</label>
 										</li>
 									</td>                                                                          
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_44" name="supervisor4" value="Writing">
+											<input type="checkbox" id="check_44" name="sv_write" value="Writing">
 											<label for="check_44">4</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_45" name="supervisor5" value="NOTA">
+											<input type="checkbox" id="check_45" name="sv_nota" value="NOTA">
 											<label for="check_45">5</label>
 										</li>
 									</td>                                   
@@ -698,31 +698,31 @@
 									<td height="30">⑲ <b>同僚</b> with colleagues</td> 
 									<td style="width:11.7%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_51" name="colleagues1" value="Speaking">
+											<input type="checkbox" id="check_51" name="co_speak" value="Speaking">
 											<label for="check_51">1</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_52" name="colleagues2" value="Listening">
+											<input type="checkbox" id="check_52" name="co_listen" value="Listening">
 											<label for="check_52">2</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_53" name="colleagues3" value="Reading">
+											<input type="checkbox" id="check_53" name="co_read" value="Reading">
 											<label for="check_53">3</label>
 										</li>
 									</td>                                                                          
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_54" name="colleagues4" value="Writing">
+											<input type="checkbox" id="check_54" name="co_write" value="Writing">
 											<label for="check_54">4</label>
 										</li>
 									</td>                            
 									<td style="width:11.8%;padding-left: 34px">
 										<li>
-											<input type="checkbox" id="check_55" name="colleagues5" value="NOTA">
+											<input type="checkbox" id="check_55" name="co_nota" value="NOTA">
 											<label for="check_55">5</label>
 										</li>
 									</td>                                      
@@ -731,31 +731,31 @@
 									<td height="30">⑳ <b>顧客</b> with customers</td> 
 									<td height="10" style="width:11.7%; padding-left: 33px">
 										<li>
-											<input type="checkbox" id="check_61" name="customers1" value="Speaking">
+											<input type="checkbox" id="check_61" name="cu_speak" value="Speaking">
 											<label for="check_61">1</label>
 										</li>
 									</td>                            
 									<td height="10" style="width:11.7%; padding-left: 33px">
 										<li>
-											<input type="checkbox" id="check_62" name="customers2" value="Listening">
+											<input type="checkbox" id="check_62" name="cu_listen" value="Listening">
 											<label for="check_62">2</label>
 										</li>
 									</td>                           
 									<td height="10" style="width:11.7%; padding-left: 33px">
 										<li>
-											<input type="checkbox" id="check_63" name="customers3" value="Reading">
+											<input type="checkbox" id="check_63" name="cu_read" value="Reading">
 											<label for="check_63">3</label>
 										</li>
 									</td>                           
 									<td height="10" style="width:11.7%; padding-left: 33px">
 										<li>
-											<input type="checkbox" id="check_64" name="customers4" value="Writing">
+											<input type="checkbox" id="check_64" name="cu_write" value="Writing">
 											<label for="check_64">4</label>
 										</li>
 									</td>                           
 									<td height="10" style="width:11.7%; padding-left: 33px">
 										<li>
-											<input type="checkbox" id="check_65" name="customers5" value="NOTA">
+											<input type="checkbox" id="check_65" name="cu_nota" value="NOTA">
 								<label for="check_65">5</label>
 										</li>
 									</td>                           
