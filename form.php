@@ -32,14 +32,14 @@
 									<h4><b>（基金返送用)</b><br>For the Japan <br>Foundation</h4>          
 								</div>
 								<div class="col-md-7" style="text-align:center">
-								<input type="hidden" name="news_id" value="4"> 
+<!-- 								<input type="hidden" name="news_id" value="4"> 
 								<input type="hidden" name="user_id" value="1952"> 
 								<input type="hidden" name="exam_year" value="2020"> 
 								<input type="hidden" name="news_title" value="JLPT (Japanese Language Proficiency Test)DEC 2019"> 
 								<input type="hidden" name="news_date" value="2020-09-02"> 
 								<input type="hidden" name="venue_exam_month" value="12"> 
 								<input type="hidden" name="description" value="<p>JLPT (Japanese&nbsp;Language Proficiency Test)DEC 2019</p>"> 
-								<input type="hidden" name="payment_amt" id="payment_amt" value=""> 
+								<input type="hidden" name="payment_amt" id="payment_amt" value="">  -->
 									<h4><b>2020年第2回日本語能力試験</b><br>The Japanese-Language Proficiency Test in 2020（December）</h4> 
 									<h2><b>受 験 願 書</b></h2>  
 									<h4>Application Form</h4>                
